@@ -21,9 +21,9 @@
                         <h1>Add/Edit Posts</h1>
                             <form id="contactForm" action="/edit/{{sno}}" method='POST' data-sb-form-api-token="API_TOKEN">
                                 <div class="form-floating">
-                                    <input class="form-control" id="tittle" name='tittle' type="text" placeholder="Enter your tittle..." data-sb-validations="required" value="{{post.tittle}}" />
-                                    <label for="name">Tittle</label>
-                                    <div class="invalid-feedback" data-sb-feedback="tittle:required">A tittle is required.</div>
+                                    <input class="form-control" id="title" name='title' type="text" placeholder="Enter your title..." data-sb-validations="required" value="{{post.title}}" />
+                                    <label for="name">Title</label>
+                                    <div class="invalid-feedback" data-sb-feedback="title:required">A title is required.</div>
                                 </div>
                                 <div class="form-floating">
                                     <input class="form-control" name='slug' id="slug" type="text" placeholder="Enter a slug..." data-sb-validations="required,slug" value="{{post.slug}}"/>

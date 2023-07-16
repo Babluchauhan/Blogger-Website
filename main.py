@@ -59,11 +59,11 @@ def post_route(post_slug):
 def add_post(sno):
     if (request.method=="POST"):
         if sno=='0':   
-            box_title=request.form.get('tittle')
+            box_title=request.form.get('title')
             slug=request.form.get('slug')
             content=request.form.get('content')
             date=datetime.now()
-            post=Posts(tittle=box_title, slug=slug,content=content,date=date)
+            post=Posts(title=box_title, slug=slug,content=content,date=date)
             db.session.add(post)
             db.session.commit()
     post=Posts.query.filter_by(sno=sno).first
@@ -83,12 +83,12 @@ def edit(sno):
             date=datetime.now()
             
             if (sno=='0'):
-                post=Posts(tittle=box_title, slug=slug,content=content,sno=sno,date=date)
+                post=Posts(title=box_title, slug=slug,content=content,sno=sno,date=date)
                 db.session.add(post)
                 db.session.commit()
             else:
                 post=Posts.query.filter_by(sno=sno).first()
-                post.tittle=box_title
+                post.title=box_title
                 post.slug=slug
                 post.content=content
                 post.date=date
